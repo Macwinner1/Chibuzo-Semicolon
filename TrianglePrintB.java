@@ -1,18 +1,69 @@
-public class TrianglePrintB{
+public class TrianglePrintAll{
 public static void main(String[] args){
 
-for(int count = 1; count < 10; count++){
+int max = 10;
+char star = '*';
 
-for(int count1 = 1; count1 <= count; count1++){
-System.out.print(' ');
-for(int count2 = count1; count2 < count1 ; count2++){
-System.out.print('*');
+for(int row = 1; row <= max; row++){
+
+for(int col = 1; col <= row; col++){
+
+System.out.print(star);
+}
+System.out.println(" ");
+
 }
 
+
+
+for(int row = 1; row <= max; row++){
+
+for(int col = row; col <= max; col++){
+
+System.out.print(" ");
 }
-System.out.println();
+for(int col2 = 1; col2 < row; col2++){
+
+System.out.print(star);
 
 }
+System.out.println(" ");
+
+}
+System.out.println(" ");
+
+
+for(int row = 1; row <= max; row++){
+
+for(int col = row; col <= max; col++){
+
+System.out.print(star);
+}
+for(int col2 = 1; col2 < row; col2++){
+
+System.out.print(" ");
+
+}
+System.out.println(" ");
+
+}
+
+for(int row = 1; row <= max; row++){
+
+for(int col = 1; col < row; col++){
+
+System.out.print(" ");
+}
+for(int col2 = row; col2 < max; col2++){
+
+System.out.print(star);
+}
+
+System.out.println(" ");
+
+}
+
+
 
 
 }
