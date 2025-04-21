@@ -1,6 +1,5 @@
-public class TrianglePrintAll{
+public class TrianglePrintB{
 public static void main(String[] args){
-
 int max = 10;
 char star = '*';
 
