@@ -10,8 +10,6 @@ int largest = 0;
 int smallest = 0;
 
 while(number != sentiel){
-System.out.print("Enter any number:");
-number = input.nextInt();
 
 if(largest <= number){
 smallest = largest;
@@ -26,14 +24,15 @@ smallest = number;
 if(largest <= smallest){
 smallest = largest;
 }
-
+}
+System.out.print("Enter any number:");
+number = input.nextInt();
 }
 
-}
 
 
-System.out.print("this is the largest number: " + largest);
-System.out.print("this is the smallest number: " + smallest);
+System.out.println("this is the largest number: " + largest);
+System.out.println("this is the smallest number: " + smallest);
 }
 
 }

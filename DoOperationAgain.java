@@ -17,7 +17,7 @@ System.out.println("Do You wish to perform this operation again? press (0) to co
 count = input.nextInt();
 
 } while(count != 0);
-System.out.print("You have quite");
+System.out.print("You have quit");
 
 
 
