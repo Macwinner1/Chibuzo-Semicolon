@@ -16,11 +16,11 @@ int countValid = 0;
 int count = 0;
 
 for(; count <= countValid; ){
-System.out.println("Enter a valid Score from 0 - 100");
+System.out.println("Enter a valid Score from 0 - 100: ");
 score = input.nextInt();
 
 if(score < 0 || score > 100){
-System.out.println("Invalid Score.. Input a valid Score");
+System.out.println("Invalid Score.. Inpu.t a valid Score");
 countInValid++;
 continue;
 }
