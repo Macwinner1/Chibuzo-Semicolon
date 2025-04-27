@@ -1,24 +1,28 @@
 import java.util.Scanner; 
  
-public class NokiaMenu{ 
+public class NokiaMenuBack{ 
     public static void main(String[] args) { 
         String menu = """ 
-                Welcome to the menu list 
-                Press: 
+
+		Welcome to the menu list 
+		Press: 
  
-                1 -> Phone book 
-                2 -> Messages 
-                3 -> Chat 
-                4 -> Call register 
-                5 -> Tones 
-                6 -> Settings 
-                7 -> Call divert 
-                8 -> Games 
-                9 -> Calculator 
-                10 -> Reminders 
-                11 -> Clock 
-                12 -> Profiles 
-                13 -> SIM services 
+		1 -> Phone book 
+		2 -> Messages 
+		3 -> Chat 
+		4 -> Call register 
+		5 -> Tones 
+		6 -> Settings 
+		7 -> Call divert 
+		8 -> Games 
+		9 -> Calculator 
+		10 -> Reminders 
+		11 -> Clock 
+		12 -> Profiles 
+		13 -> SIM services
+		14 -> Exit
+
+ 
                 """; 
  
         System.out.print(menu); 
@@ -28,18 +32,21 @@ public class NokiaMenu{
             switch (pressMenu) { 
                 case 1: { 
                     String phonebook = """ 
-                            1. Phonebook 
+
+			1. Phonebook 
  
-                            1 -> Search 
-                            2 -> Service Nos. 
-                            3 -> Add name 
-                            4 -> Erase 
-                            5 -> Edit 
-                            6 -> Assign tone 
-                            7 -> Send b'card 
-                            8 -> Options 
-                            9 -> Speed dials 
-                            10 -> Voice tags 
+			1 -> Search 
+			2 -> Service Nos. 
+			3 -> Add name 
+			4 -> Erase 
+			5 -> Edit 
+			6 -> Assign tone 
+			7 -> Send b'card 
+			8 -> Options 
+			9 -> Speed dials 
+			10 -> Voice tags
+			11 <- Back
+ 
                             """; 
                     System.out.print(phonebook); 
                     int pressPhoneBook = menuInput.nextInt(); 
@@ -89,10 +96,14 @@ public class NokiaMenu{
                             break; 
                         case 8: { 
                             String options = """ 
-                                    8. Options 
- 
-                                       1. Type of view 
-                                       2. Memory status 
+
+				8. Options 
+
+				1. Type of view 
+				2. Memory status 
+				3.<- Back
+
+
                                     """; 
                             System.out.print(options); 
                             int pressOptions = menuInput.nextInt(); 
@@ -129,18 +140,22 @@ public class NokiaMenu{
                 } 
                 case 2: { 
                     String messages = """ 
-                            2. Messages 
+
+
+			2. Messages 
  
-                            1 -> Write messages 
-                            2 -> Inbox 
-                            3 -> Outbox 
-                            4 -> Picture messages 
-                            5 -> Templates 
-                            6 -> Smileys 
-                            7 -> Message settings 
-                            8 -> Info service 
-                            9 -> Voice mailbox number 
-                            10 -> Service command editor 
+			1 -> Write messages 
+			2 -> Inbox 
+			3 -> Outbox 
+			4 -> Picture messages 
+			5 -> Templates 
+			6 -> Smileys 
+			7 -> Message settings 
+			8 -> Info service 
+			9 -> Voice mailbox number 
+			10 -> Service command editor 
+			11 <- Back
+
                             """; 
                     System.out.print(messages); 
                     int pressMessages = menuInput.nextInt(); 
@@ -184,21 +199,27 @@ public class NokiaMenu{
                             break; 
                         case 7: { 
                             String messageSettings = """ 
-                                    7. Message Settings 
+
+				7. Message Settings 
  
-                                       1. Set 1 
-                                       2. Common 
+				1. Set 1 
+				2. Common 
+				3.<- Back
+
                                     """; 
                             System.out.print(messageSettings); 
                             int pressMessageSettings = menuInput.nextInt(); 
                             switch (pressMessageSettings) { 
                                 case 1: { 
                                     String set1 = """ 
-                                            1. Set 1 
+
+					1. Set 1 
  
-                                               1. Message center number 
-                                               2. Messages sent as 
-                                               3. Message validity 
+					1. Message center number 
+					2. Messages sent as 
+					3. Message validity
+					4.<- back
+ 
                                             """; 
                                     System.out.print(set1); 
                                     int pressSet1 = menuInput.nextInt(); 
@@ -226,11 +247,15 @@ public class NokiaMenu{
                                 } 
                                 case 2: { 
                                     String common = """ 
-                                            2. Common 
+
+					2. Common 
  
-                                               1. Delivery reports 
-                                               2. Reply via same centre 
-                                               3. Character support 
+					1. Delivery reports 
+					2. Reply via same centre 
+					3. Character support 
+					4.<- Back
+
+
                                             """; 
                                     System.out.print(common); 
                                     int pressCommon = menuInput.nextInt(); 
@@ -288,16 +313,20 @@ public class NokiaMenu{
                     break; 
                 case 4: { 
                     String callRegister = """ 
-                            4. Call register 
+
+
+			4. Call register 
  
-                            1 -> Missed calls 
-                            2 -> Received calls 
-                            3 -> Dialled numbers 
-                            4 -> Erase recent call lists 
-                            5 -> Show call duration 
-                            6 -> Show call costs 
-                            7 -> Call cost settings 
-                            8 -> Prepaid credit 
+			1 -> Missed calls 
+			2 -> Received calls 
+			3 -> Dialled numbers 
+			4 -> Erase recent call lists 
+			5 -> Show call duration 
+			6 -> Show call costs 
+			7 -> Call cost settings 
+			8 -> Prepaid credit 
+			9 <- Back
+
                             """; 
                     System.out.print(callRegister); 
                     int pressCallRegister = menuInput.nextInt(); 
@@ -337,6 +366,7 @@ public class NokiaMenu{
 					3. Received calls' duration
 					4. Dialled calls' duration
 					5. Clear timers
+					6.<- Back
 
                                             """; 
                                     System.out.print(showCallDuration); 
@@ -385,7 +415,7 @@ public class NokiaMenu{
 					1. Last call cost 
 					2. All calls' cost
 					3. Clear counters
-
+					4.<- Back
 
                                             """; 
                                     System.out.print(showCallCosts); 
@@ -421,7 +451,7 @@ public class NokiaMenu{
  
 					1. Call cost limit 
 					2. Show costs in
-					     
+					3.<- Back
 
                                             """; 
                                     System.out.print(callCostSettings); 
@@ -453,6 +483,7 @@ public class NokiaMenu{
                 } 
                 case 5: { 
                     String tones = """ 
+
                             5. Tones 
  
                             1 -> Ringing tone 
@@ -464,6 +495,8 @@ public class NokiaMenu{
                             7 -> Warning and game tones 
                             8 -> Vibrating alert 
                             9 -> Screen saver 
+			    10 <-Back
+
                             """; 
                     System.out.print(tones); 
                     int pressTones = menuInput.nextInt(); 
@@ -528,12 +561,14 @@ public class NokiaMenu{
                 } 
                 case 6: {                           
                       String settings = """ 
+
     				6. Settings 
  
                                 1 -> Call settings 
             			2 -> Phone settings 
                            	3 -> Security settings 
-                            	4 -> Restore factory settings 
+                            	4 -> Restore factory settings
+				5 <- Back 
  
                                     """; 
                             System.out.print(settings); 
@@ -550,6 +585,7 @@ public class NokiaMenu{
 					4. Own number sending
 					5. Phone line in use
 					6. Automatic answer
+					7.<- Back
 
 
                                             """; 
@@ -606,6 +642,7 @@ public class NokiaMenu{
 					4. Network selection
 					5. Lights
 					6. Confirm SIM service actions
+					7.<- Back
 
 
                                             """; 
@@ -663,6 +700,7 @@ public class NokiaMenu{
 					4. Closed user group
 					5. Phone security
 					6. Change access codes
+					7.<- Back
 
 
                                             """; 
@@ -744,6 +782,7 @@ public class NokiaMenu{
                     break; 
                 case 11: { 
                     String clock = """ 
+
                             11. Clock 
  
                             1 -> Alarm clock 
@@ -752,6 +791,9 @@ public class NokiaMenu{
                             4 -> Stopwatch 
                             5 -> Countdown timer 
                             6 -> Auto update of date and time 
+			    7 <- Back
+
+
                             """; 
                     System.out.print(clock); 
                     int pressClock = menuInput.nextInt(); 
