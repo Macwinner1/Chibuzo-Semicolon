@@ -120,6 +120,10 @@ public class NokiaMenuBack{
 
 				    """; System.out.print(memoryStatus);} 
                                     break; 
+				default: 
+                    			System.out.print("Invalid option"); 
+                    			break;
+
                             } 
                             break; 
                         } 
@@ -135,6 +139,12 @@ public class NokiaMenuBack{
 
 			    """;   System.out.print(voiceTags);}
                             break; 
+			case 11: System.out.print(menu + pressMenu);
+                            break;
+			default: 
+                    		System.out.print("Invalid option"); 
+                    		break;
+
                     } 
                     break; 
                 } 
@@ -241,7 +251,11 @@ public class NokiaMenuBack{
 						3. Message validity
 
 					    """; System.out.print(messagesValidity);} 
-                                            break; 
+                                            break;
+					default: 
+                    				System.out.print("Invalid option"); 
+                    				break;
+ 
                                     } 
                                     break; 
                                 } 
@@ -277,7 +291,11 @@ public class NokiaMenuBack{
 						3. Character support
 
 					    """; System.out.print(characterSupport);}
-                                            break; 
+                                            break;
+					default: 
+                    				System.out.print("Invalid option"); 
+                    				break;
+ 
                                     } 
                                     break; 
                                 } 
@@ -301,7 +319,11 @@ public class NokiaMenuBack{
 				 10. Service command editor 
 
 			    """;   System.out.print(serviceCommand);} 
-                            break; 
+                            break;
+			default: 
+                    		System.out.print("Invalid option"); 
+                    		break;
+ 
                     } 
                     break; 
                 } 
@@ -402,6 +424,10 @@ public class NokiaMenuBack{
 
 					    """; System.out.print(clearTimers);} 
                                             break;
+					default: 
+                    				System.out.print("Invalid option"); 
+                    				break;
+
                                     } 
                                     break; 
                                 } 
@@ -439,6 +465,10 @@ public class NokiaMenuBack{
 
 					    """; System.out.print(clearCounters);} 
                                             break;
+					default: 
+                    				System.out.print("Invalid option"); 
+                    				break;
+
                                     } 
                                     break; 
                                 } 
@@ -477,7 +507,11 @@ public class NokiaMenuBack{
 				8. Prepaid credit
 
 			    """;   System.out.print(prepaidCredit);}
-                            break; 
+                            break;
+			default: 
+                    		System.out.print("Invalid option"); 
+                    		break;
+ 
                     } 
                     break; 
                 } 
@@ -555,19 +589,23 @@ public class NokiaMenuBack{
 				9. Screen saver
 
 			    """;   System.out.print(screenSaver);} 
-                            break; 
+                            break;
+			default: 
+                    		System.out.print("Invalid option"); 
+                    		break;
+ 
                     } 
                     break; 
                 } 
                 case 6: {                           
                       String settings = """ 
 
-    				6. Settings 
+				6. Settings 
  
-                                1 -> Call settings 
-            			2 -> Phone settings 
-                           	3 -> Security settings 
-                            	4 -> Restore factory settings
+				1 -> Call settings 
+				2 -> Phone settings 
+				3 -> Security settings 
+				4 -> Restore factory settings
 				5 <- Back 
  
                                     """; 
@@ -627,7 +665,11 @@ public class NokiaMenuBack{
 						6. Automatic answer
 
 					    """; System.out.print(automaticAnswer);} 
-                                            break; 
+                                            break;
+					default: 
+                    				System.out.print("Invalid option"); 
+                    				break;
+ 
                                     } 
                                     break; 
                                 } 
@@ -684,7 +726,11 @@ public class NokiaMenuBack{
 						6. Confirm SIM service actions
 
 					    """; System.out.print(confirmSIM);} 
-                                            break; 
+                                            break;
+					default: 
+                    				System.out.print("Invalid option"); 
+                    				break;
+ 
                                     } 
                                     break; 
                                 } 
@@ -742,7 +788,10 @@ public class NokiaMenuBack{
 						6. Change access codes
 
 					    """; System.out.print(changeAccessCodes);} 
-                                            break; 
+                                            break;
+					default: 
+                    				System.out.print("Invalid option"); 
+                    				break; 
                                     } 
                                     break; 
                                 } 
@@ -753,6 +802,10 @@ public class NokiaMenuBack{
 
 			    	     """;   System.out.print(restoreFactory);} 
                             	     break;
+				default: 
+                    			System.out.print("Invalid option"); 
+                    			break;
+
                                      
                                 } break;
                             }
@@ -783,15 +836,15 @@ public class NokiaMenuBack{
                 case 11: { 
                     String clock = """ 
 
-                            11. Clock 
+			11. Clock
  
-                            1 -> Alarm clock 
-                            2 -> Clock settings 
-                            3 -> Date setting 
-                            4 -> Stopwatch 
-                            5 -> Countdown timer 
-                            6 -> Auto update of date and time 
-			    7 <- Back
+			1 -> Alarm clock 
+			2 -> Clock settings
+			3 -> Date setting 
+			4 -> Stopwatch 
+			5 -> Countdown timer 
+			6 -> Auto update of date and time 
+			7 <- Back
 
 
                             """; 
@@ -834,7 +887,10 @@ public class NokiaMenuBack{
 				6. Auto update of date and time
 
 			    """;   System.out.print(AutoUpdate);} 
-                            break; 
+                            break;
+			default: 
+                    		System.out.print("Invalid option"); 
+                    		break; 
                     } 
                     break; 
                 } 
