@@ -1,6 +1,6 @@
 import java.util.Scanner; 
  
-public class NokiaMenuBack{ 
+public class NokiaBackOption{ 
     public static void main(String[] args) { 
         String menu = """ 
 
@@ -24,7 +24,8 @@ public class NokiaMenuBack{
 
  
                 """; 
- 
+ boolean back = true;
+while(back){
         System.out.print(menu); 
         Scanner menuInput = new Scanner(System.in); 
             int pressMenu = menuInput.nextInt(); 
@@ -52,48 +53,137 @@ public class NokiaMenuBack{
                     int pressPhoneBook = menuInput.nextInt(); 
  
                     switch (pressPhoneBook) { 
-                        case 1: {String search = """
-			
-				1. Search
+                        case 1:  
 
-                            """; System.out.print(search);} 
-                            break; 
-                        case 2: {String serviceNos = """
+			boolean back1 = true;
 
-				2. Service Nos
+		{ String search = """
 
-			    """;   System.out.print(serviceNos);} 
-                            break; 
-                        case 3: {String addName = """
+			Search
+			0. Back
 
-				3. Add name
+		    """;
+		  System.out.print(search);}
+		int pressSearch = menuInput.nextInt();	
+	while(back1){ 
+		switch(pressSearch){
+			case 0: back1 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 1
 
-			    """;   System.out.print(addName);} 
-                            break; 
-                        case 4:{String erase = """
+                        case 2: 
+			boolean back2 = true;
 
-				4. Erase
+		{ String serviceNos = """
 
-			    """;   System.out.print(erase);} 
-                            break; 
-                        case 5: {String edit = """
+			Service Nos
+			0. Back
 
-				5. Edit
+		    """;
+		  System.out.print(serviceNos);}
+		int pressServiceNos = menuInput.nextInt();	
+	while(back2){ 
+		switch(pressServiceNos){
+			case 0: back2 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 2
 
-			    """;   System.out.print(edit);} 
-                            break; 
-                        case 6: {String assignTone = """
+                        case 3:
 
-				6. Assign tone
+			boolean back3 = true;
 
-			    """;   System.out.print(assignTone);} 
-                            break; 
-                        case 7: {String sendBcard = """
+		{ String addName = """
 
-				7. Send b'card
+			Add name
+			0. Back
 
-		 	    """;   System.out.print(sendBcard);} 
-                            break; 
+		    """;
+		  System.out.print(addName);}
+		int pressAddname = menuInput.nextInt();	
+	while(back3){ 
+		switch(pressAddname){
+			case 0: back3 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 3
+
+                        case 4:
+
+		boolean back4 = true;
+
+		{ String erase = """
+
+			Erase
+			0. Back
+
+		    """;
+		  System.out.print(erase);}
+		int pressErase = menuInput.nextInt();	
+	while(back4){ 
+		switch(pressErase){
+			case 0: back4 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 4
+
+                        case 5: 
+		boolean back5 = true;
+
+		{ String edit = """
+
+			Edit
+			0. Back
+
+		    """;
+		  System.out.print(edit);}
+		int pressEdit = menuInput.nextInt();	
+	while(back5){ 
+		switch(pressEdit){
+			case 0: back5 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 5
+
+                        case 6:  
+
+			boolean back6 = true;
+
+		{ String assignTone = """
+
+			Assign tone
+			0. Back
+
+		    """;
+		  System.out.print(assignTone);}
+		int pressAssigntone = menuInput.nextInt();	
+	while(back6){ 
+		switch(pressAssigntone){
+			case 0: back6 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 6			
+
+                        case 7: 
+
+		boolean back7 = true;
+
+		{ String sendBcard = """
+
+			Send b'card
+			0. Back
+
+		    """;
+		  System.out.print(sendBcard);}
+		int pressSendBcard = menuInput.nextInt();	
+	while(back7){ 
+		switch(pressSendBcard){
+			case 0: back7 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 7
+
                         case 8: { 
                             String options = """ 
 
@@ -127,24 +217,49 @@ public class NokiaMenuBack{
                             } 
                             break; 
                         } 
-                        case 9:{String speedDials = """
+                        case 9:
 
-				9. Speed dials
+			boolean back9 = true;
 
-			    """;   System.out.print(speedDials);} 
-                            break; 
-                        case 10:{String voiceTags = """
+		{ String speedDials = """
 
-				10. Voice tags
+			Speed dials
+			0. Back
 
-			    """;   System.out.print(voiceTags);}
-                            break; 
+		    """;
+		  System.out.print(speedDials);}
+		int pressSpeedDials = menuInput.nextInt();	
+	while(back9){ 
+		switch(pressSpeedDials){
+			case 0: back9 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 9
+
+                        case 10:
+
+			boolean back10 = true;
+
+		{ String voiceTags = """
+
+			Voice tags
+			0. Back
+
+		    """;
+		  System.out.print(voiceTags);}
+		int pressVoicetags = menuInput.nextInt();	
+	while(back10){ 
+		switch(pressVoicetags){
+			case 0: back10 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 10
+
 			case 11: System.out.print(menu + pressMenu);
                             break;
 			default: 
                     		System.out.print("Invalid option"); 
                     		break;
-
                     } 
                     break; 
                 } 
@@ -171,42 +286,117 @@ public class NokiaMenuBack{
                     int pressMessages = menuInput.nextInt(); 
  
                     switch (pressMessages) { 
-                        case 1: {String writeMessages = """
+                        case 1:  
 
-				1. Write Messages
+		boolean back1 = true;
 
-			    """;   System.out.print(writeMessages);} 
-                            break; 
-                        case 2: {String inbox = """
+		{ String writeMessages = """
 
-				2. Inbox
+			Write Messages
+			0. Back
 
-			    """;   System.out.print(inbox);} 
-                            break; 
-                        case 3:{String outbox = """
+		    """;
+		  System.out.print(writeMessages);}
+		int pressWriteMessages = menuInput.nextInt();	
+	while(back1){ 
+		switch(pressWriteMessages){
+			case 0: back1 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 1
 
-				3. Outbox
-	
-			    """;   System.out.print(outbox);} 
-                            break; 
-                        case 4:{String pictureMessages = """
+                        case 2:  
+		boolean back2 = true;
 
-				4. Picture Messages
+		{ String inbox = """
 
-			    """;   System.out.print(pictureMessages);}
-                            break; 
-                        case 5: {String templates = """
+			Inbox
+			0. Back
 
-				5. Templates
+		    """;
+		  System.out.print(inbox);}
+		int pressInbox = menuInput.nextInt();	
+	while(back2){ 
+		switch(pressInbox){
+			case 0: back2 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 2
 
-			    """;   System.out.print(templates);} 
-                            break; 
-                        case 6: {String smileys = """
+                        case 3:
 
-				6. Smileys
+			boolean back3 = true;
 
-			    """;   System.out.print(smileys);} 
-                            break; 
+		{ String outbox = """
+
+			Outbox
+			0. Back
+
+		    """;
+		  System.out.print(outbox);}
+		int pressOutbox = menuInput.nextInt();	
+	while(back3){ 
+		switch(pressOutbox){
+			case 0: back3 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 3
+
+                        case 4: 
+			boolean back4 = true;
+
+		{ String pictureMessages = """
+
+			Picture Messages
+			0. Back
+
+		    """;
+		  System.out.print(pictureMessages);}
+		int pressPictureMessages = menuInput.nextInt();	
+	while(back4){ 
+		switch(pressPictureMessages){
+			case 0: back4 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 4
+
+                        case 5: 			
+			boolean back5 = true;
+
+		{ String templates = """
+
+			Templates
+			0. Back
+
+		    """;
+		  System.out.print(templates);}
+		int pressTemplates = menuInput.nextInt();	
+	while(back5){ 
+		switch(pressTemplates){
+			case 0: back5 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 5
+
+                        case 6:
+
+			boolean back6 = true;
+
+		{ String smileys = """
+
+			Smileys
+			0. Back
+
+		    """;
+		  System.out.print(smileys);}
+		int pressSmileys = menuInput.nextInt();	
+	while(back6){ 
+		switch(pressSmileys){
+			case 0: back6 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 6
+
                         case 7: { 
                             String messageSettings = """ 
 
@@ -252,6 +442,13 @@ public class NokiaMenuBack{
 
 					    """; System.out.print(messagesValidity);} 
                                             break;
+					case 4: {String backToSet1 = """
+
+						4. Back to Set1
+
+			   		     """;   System.out.print(backToSet1);} 
+                   		             break;
+
 					default: 
                     				System.out.print("Invalid option"); 
                     				break;
@@ -292,6 +489,14 @@ public class NokiaMenuBack{
 
 					    """; System.out.print(characterSupport);}
                                             break;
+					
+					case 4: {String backToCommon = """
+
+						4. Back to Messages
+
+			   		 """;   System.out.print(backToCommon);} 
+                   		         break;
+
 					default: 
                     				System.out.print("Invalid option"); 
                     				break;
@@ -302,24 +507,69 @@ public class NokiaMenuBack{
                             } 
                             break; 
                         } 
-                        case 8: {String infoService = """
+                        case 8:
 
-				8. Info Service
+			boolean back8 = true;
 
-			    """;   System.out.print(infoService);} 
-                            break; 
-                        case 9: {String voiceMailboxNumber = """
+		{ String infoService = """
 
-				9. Voice mailbox number 
-	
-			    """;   System.out.print(voiceMailboxNumber);}
-                            break; 
-                        case 10: {String serviceCommand = """
+			Info Service
+			0. Back
 
-				 10. Service command editor 
+		    """;
+		  System.out.print(infoService);}
+		int pressInfoService = menuInput.nextInt();	
+	while(back8){ 
+		switch(pressInfoService){
+			case 0: back8 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 8
 
-			    """;   System.out.print(serviceCommand);} 
+                        case 9:
+
+		boolean back9 = true;
+
+		{ String voiceMailboxNumber = """
+
+			Voice mailbox number
+			0. Back
+
+		    """;
+		  System.out.print(voiceMailboxNumber);}
+		int pressVoiceMailboxNumber = menuInput.nextInt();	
+	while(back9){ 
+		switch(pressVoiceMailboxNumber){
+			case 0: back9 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 9
+
+                        case 10:
+		boolean back10 = true;
+
+		{ String serviceCommand = """
+
+			Service command editor
+			0. Back
+
+		    """;
+		  System.out.print(serviceCommand);}
+		int pressServiceCommand = menuInput.nextInt();	
+	while(back10){ 
+		switch(pressServiceCommand){
+			case 0: back10 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 10
+
+			case 11: {String backTomsg = """
+
+				11. Back to Messages
+
+			    """;   System.out.print(backTomsg);} 
                             break;
+
 			default: 
                     		System.out.print("Invalid option"); 
                     		break;
@@ -327,12 +577,26 @@ public class NokiaMenuBack{
                     } 
                     break; 
                 } 
-                case 3: { String chat = """
+                case 3:
 
-			3. Chat
+		boolean back1 = true;
 
-		    """;   System.out.print(chat);}
-                    break; 
+		{ String chat = """
+
+			Chat
+			0. Back
+
+		    """;
+		  System.out.print(chat);}
+		int pressChat = menuInput.nextInt();	
+	while(back1){ 
+		switch(pressChat){
+			case 0: back1 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 1
+
+
                 case 4: { 
                     String callRegister = """ 
 
@@ -354,30 +618,83 @@ public class NokiaMenuBack{
                     int pressCallRegister = menuInput.nextInt(); 
  
                     switch (pressCallRegister) { 
-                        case 1: {String missedCalls = """
+                        case 1:
 
-				1. Missed calls
+			boolean back01 = true;
 
-			    """;   System.out.print(missedCalls);} 
-                            break; 
-                        case 2: {String receivedCalls = """
+		{ String missedCalls = """
 
-				2. Received calls
+			Missed calls
+			0. Back
 
-			    """;   System.out.print(receivedCalls);} 
-                            break; 
-                        case 3: {String dialledNumbers = """
+		    """;
+		  System.out.print(missedCalls);}
+		int pressMissedcalls = menuInput.nextInt();	
+	while(back01){ 
+		switch(pressMissedcalls){
+			case 0: back01 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 01
 
-				3. Dialled numbers
+                        case 2: 
 
-			    """;   System.out.print(dialledNumbers);} 
-                            break; 
-                        case 4: {String eraseRecentCall = """
+			boolean back2 = true;
 
-				4. Erase recent call lists
+		{ String receivedCalls = """
 
-			    """;   System.out.print(eraseRecentCall);} 
-                            break; 
+			Received calls
+			0. Back
+
+		    """;
+		  System.out.print(receivedCalls);}
+		int pressReceivedcalls = menuInput.nextInt();	
+	while(back2){ 
+		switch(pressReceivedcalls){
+			case 0: back2 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 2
+
+                        case 3:
+
+			boolean back3 = true;
+
+		{ String dialledNumbers = """
+
+			Dialled numbers
+			0. Back
+
+		    """;
+		  System.out.print(dialledNumbers);}
+		int pressDiallednumbers = menuInput.nextInt();	
+	while(back3){ 
+		switch(pressDiallednumbers){
+			case 0: back3 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 3
+
+
+                        case 4:
+
+		boolean back4 = true;
+
+		{ String eraseRecentCall = """
+
+			Erase recent call lists
+			0. Back
+
+		    """;
+		  System.out.print(eraseRecentCall);}
+		int pressEraseRecentCall = menuInput.nextInt();	
+	while(back4){ 
+		switch(pressEraseRecentCall){
+			case 0: back4 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 4
+
                         case 5: {  
 				String showCallDuration = """ 
 
@@ -424,6 +741,14 @@ public class NokiaMenuBack{
 
 					    """; System.out.print(clearTimers);} 
                                             break;
+
+					case 6: {String backToCallRegister1 = """
+
+						6. Back to Call Register
+
+			    	     	     """;   System.out.print(backToCallRegister1);} 
+                            	     	     break;
+
 					default: 
                     				System.out.print("Invalid option"); 
                     				break;
@@ -465,6 +790,14 @@ public class NokiaMenuBack{
 
 					    """; System.out.print(clearCounters);} 
                                             break;
+
+					case 4: {String backToCallRegister2 = """
+
+						4. Back to Call Register
+
+			    	     	     """;   System.out.print(backToCallRegister2);} 
+                            	     	     break;
+
 					default: 
                     				System.out.print("Invalid option"); 
                     				break;
@@ -499,15 +832,35 @@ public class NokiaMenuBack{
 
 					    """; System.out.print(showCostsIn);} 
                                             break;
+					case 3: {String backToCallRegister3 = """
+
+						3. Back to Call Register
+
+			    	     	     """;   System.out.print(backToCallRegister3);} 
+                            	     	     break;
+
+
                                     } 
                                     break; 
                                 } 
-                        case 8: {String prepaidCredit = """
+                        case 8:
 
-				8. Prepaid credit
+			boolean back8 = true;
 
-			    """;   System.out.print(prepaidCredit);}
-                            break;
+		{ String prepaidCredit = """
+
+			Prepaid credit
+			0. Back
+
+		    """;
+		  System.out.print(prepaidCredit);}
+		int pressPrepaidCredit = menuInput.nextInt();	
+	while(back8){ 
+		switch(pressPrepaidCredit){
+			case 0: back8 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 8
 			default: 
                     		System.out.print("Invalid option"); 
                     		break;
@@ -536,60 +889,196 @@ public class NokiaMenuBack{
                     int pressTones = menuInput.nextInt(); 
  
                     switch (pressTones) { 
-                        case 1: {String ringingTone = """
+                        case 1:  
 
-				1. Ringing Tone
+		boolean back001 = true;
 
-			    """;   System.out.print(ringingTone);}
-                            break; 
-                        case 2: {String ringingVolume = """
+		{ String ringingTone = """
 
-				2. Ringing volume
+			Ringing Tone
+			0. Back
 
-			    """;   System.out.print(ringingVolume);} 
-                            break; 
-                        case 3:{String incomingCall = """
+		    """;
+		  System.out.print(ringingTone);}
+		int pressRingingTone = menuInput.nextInt();	
+	while(back001){ 
+		switch(pressRingingTone){
+			case 0: back001 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 001
 
-				3. Incoming call alert
+                        case 2:
 
-			    """;   System.out.print(incomingCall);}
-                            break; 
-                        case 4:{String composer = """
+	boolean back002 = true;
 
-				4. Composers
+		{ String ringingVolume = """
 
-				""";   System.out.print(composer);} 
-                            break; 
-                        case 5: {String messageAlert = """
+			Ringing volume
+			0. Back
 
-				5. Message alert tone
+		    """;
+		  System.out.print(ringingVolume);}
+		int pressRingingvolume = menuInput.nextInt();	
+	while(back002){ 
+		switch(pressRingingvolume){
+			case 0: back002 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 002
 
-			    """;   System.out.print(messageAlert);} 
-                            break; 
-                        case 6:{String keypadTones = """
+                        case 3:
 
-				6. Keypad tones
+		boolean back003 = true;
 
-			    """;   System.out.print(keypadTones);} 
-                            break; 
-                        case 7:{String warningAndGame = """
+		{ String incomingCall = """
 
-				7. Warning and game tones
+			Ringing volume
+			0. Back
 
-			    """;   System.out.print(warningAndGame);} 
-                            break; 
-                        case 8: {String vibratingAlert = """
+		    """;
+		  System.out.print(incomingCall);}
+		int pressIncomingCall = menuInput.nextInt();	
+	while(back003){ 
+		switch(pressIncomingCall){
+			case 0: back003 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 003
 
-				8. Vibrating alert
+                        case 4:
 
-			    """;   System.out.print(vibratingAlert);} 
-                            break; 
-                        case 9: {String screenSaver = """
+		boolean back004 = true;
 
-				9. Screen saver
+		{ String composer = """
 
-			    """;   System.out.print(screenSaver);} 
-                            break;
+			Composers
+			0. Back
+
+		    """;
+		  System.out.print(composer);}
+		int pressComposers = menuInput.nextInt();	
+	while(back004){ 
+		switch(pressComposers){
+			case 0: back004 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 004
+
+                        case 5:
+
+		boolean back005 = true;
+
+		{ String messageAlert = """
+
+			Message alert tone
+			0. Back
+
+		    """;
+		  System.out.print(messageAlert);}
+		int pressMessageAlert = menuInput.nextInt();	
+	while(back005){ 
+		switch(pressMessageAlert){
+			case 0: back005 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 005
+
+                        case 6: 
+
+		boolean back006 = true;
+
+		{ String keypadTones = """
+
+			Keypad tones
+			0. Back
+
+		    """;
+		  System.out.print(keypadTones);}
+		int pressKeypadTones = menuInput.nextInt();	
+	while(back006){ 
+		switch(pressKeypadTones){
+			case 0: back006 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 006
+
+                        case 7:
+
+		boolean back007 = true;
+
+		{ String warningAndGame = """
+
+			Warning and game tones
+			0. Back
+
+		    """;
+		  System.out.print(warningAndGame);}
+		int pressWarningAndGame = menuInput.nextInt();	
+	while(back007){ 
+		switch(pressWarningAndGame){
+			case 0: back007 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 007
+
+                        case 8:
+
+		boolean back008 = true;
+
+		{ String vibratingAlert = """
+
+			Vibrating alert
+			0. Back
+
+		    """;
+		  System.out.print(vibratingAlert);}
+		int pressVibratingAlert = menuInput.nextInt();	
+	while(back008){ 
+		switch(pressVibratingAlert){
+			case 0: back008 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 008
+ 
+                        case 9:
+
+		boolean back009 = true;
+
+		{ String screenSaver = """
+
+			Screen saver
+			0. Back
+
+		    """;
+		  System.out.print(screenSaver);}
+		int pressScreenSaver = menuInput.nextInt();	
+	while(back009){ 
+		switch(pressScreenSaver){
+			case 0: back009 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 009 
+
+			case 10: 
+
+		boolean backTo0 = true;
+
+		{ String backToTones = """
+
+			Press
+			0. You are about to go back...
+
+		    """;
+		  System.out.print(backToTones);}
+		int pressBackToTones = menuInput.nextInt();	
+	while(backTo0){ 
+		switch(pressBackToTones){
+			case 0: backTo0 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop backTo0 
+
 			default: 
                     		System.out.print("Invalid option"); 
                     		break;
@@ -606,7 +1095,7 @@ public class NokiaMenuBack{
 				2 -> Phone settings 
 				3 -> Security settings 
 				4 -> Restore factory settings
-				5 <- Back 
+				5 <- Back to Main Menu
  
                                     """; 
                             System.out.print(settings); 
@@ -623,7 +1112,7 @@ public class NokiaMenuBack{
 					4. Own number sending
 					5. Phone line in use
 					6. Automatic answer
-					7.<- Back
+					7.<- Back to Settings
 
 
                                             """; 
@@ -666,6 +1155,14 @@ public class NokiaMenuBack{
 
 					    """; System.out.print(automaticAnswer);} 
                                             break;
+
+					case 7: {String backToSettings1 = """
+
+						7. Back to settings
+
+				    	     """;   System.out.print(backToSettings1);} 
+        	                    	     break;
+
 					default: 
                     				System.out.print("Invalid option"); 
                     				break;
@@ -727,6 +1224,15 @@ public class NokiaMenuBack{
 
 					    """; System.out.print(confirmSIM);} 
                                             break;
+
+					case 7: {String backToSettings2 = """
+
+						7. Back to settings
+
+			    	       	    """;   System.out.print(backToSettings2);} 
+                            	 	    break;
+
+
 					default: 
                     				System.out.print("Invalid option"); 
                     				break;
@@ -789,6 +1295,13 @@ public class NokiaMenuBack{
 
 					    """; System.out.print(changeAccessCodes);} 
                                             break;
+					case 7: {String backToSettings3 = """
+
+						7. Back to settings
+
+			    	     	    """;   System.out.print(backToSettings3);} 
+                            	            break;
+
 					default: 
                     				System.out.print("Invalid option"); 
                     				break; 
@@ -802,6 +1315,14 @@ public class NokiaMenuBack{
 
 			    	     """;   System.out.print(restoreFactory);} 
                             	     break;
+
+				case 5: {String backToSettings = """
+
+					5. Back to settings
+
+			    	     """;   System.out.print(backToSettings);} 
+                            	     break;
+
 				default: 
                     			System.out.print("Invalid option"); 
                     			break;
@@ -809,30 +1330,81 @@ public class NokiaMenuBack{
                                      
                                 } break;
                             }
-                case 7:{ String callDivert = """
+                case 7:
 
-			7. Call divert
+		boolean back7 = true;
 
-		    """;   System.out.print(callDivert);} 
-                    break; 
-                case 8:{ String games = """
+		{ String callDivert = """
 
-			8. Games
+			Call divert
+			0. Back
 
-		    """;   System.out.print(games);} 
-                    break; 
-                case 9:{ String calculator = """
+		    """;
+		  System.out.print(callDivert);}
+		int pressCallDivert = menuInput.nextInt();	
+	while(back7){ 
+		switch(pressCallDivert){
+			case 0: back7 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 7
 
-			9. Calculator
+                case 8: 
 
-		    """;   System.out.print(calculator);} 
-                    break; 
-                case 10:{ String reminders = """
+		boolean back8 = true;
 
-			10. Reminders
+		{ String games = """
 
-		    """;   System.out.print(reminders);} 
-                    break; 
+			Games
+			0. Back
+
+		    """;
+		  System.out.print(games);}
+		int pressGames = menuInput.nextInt();	
+	while(back8){ 
+		switch(pressGames){
+			case 0: back8 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 8
+
+                case 9:
+
+		boolean back9 = true;
+
+		{ String calculator = """
+
+			Calculator
+			0. Back
+
+		    """;
+		  System.out.print(calculator);}
+		int pressCalculator = menuInput.nextInt();	
+	while(back9){ 
+		switch(pressCalculator){
+			case 0: back9 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 9
+
+                case 10:
+			boolean back10 = true;
+
+		{ String reminders = """
+
+			Reminders
+			0. Back
+
+		    """;
+		  System.out.print(reminders);}
+		int pressReminders = menuInput.nextInt();	
+	while(back10){ 
+		switch(pressReminders){
+			case 0: back10 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 10
+
                 case 11: { 
                     String clock = """ 
 
@@ -888,30 +1460,66 @@ public class NokiaMenuBack{
 
 			    """;   System.out.print(AutoUpdate);} 
                             break;
+			case 14: {String clockMenu = """
+
+				7. Back to Clock Menu
+
+		    	    """;   System.out.print(clockMenu);} 
+                    	    break;
+			
 			default: 
                     		System.out.print("Invalid option"); 
                     		break; 
                     } 
                     break; 
                 } 
-                case 12:{ String profiles = """
+                case 12:
+			boolean back12 = true;
 
-			12. Profiles
+		{ String profiles = """
 
-		    """;   System.out.print(profiles);}
-                    break; 
-                case 13: { String simServices = """
+			Profiles
+			0. Back
 
-			13. SIM services
+		    """;
+		  System.out.print(profiles);}
+		int pressProfiles = menuInput.nextInt();	
+	while(back12){ 
+		switch(pressProfiles){
+			case 0: back12 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 12
 
-		    """;   System.out.print(simServices);} 
-                    break; 
+                case 13: 
+		boolean back13 = true;
+
+		{ String simServices = """
+
+			SIM services
+			0. Back
+
+		    """;
+		  System.out.print(simServices);}
+		int pressSIMService = menuInput.nextInt();	
+	while(back13){ 
+		switch(pressSIMService){
+			case 0: back13 = false; break;
+			default: System.out.print("Invalid option");
+			} break;
+		} break; //close loop 13
+
+		case 14: back = false; break;
+ 
                 default: 
                     System.out.print("Invalid option"); 
                     break; 
             } 
-       { 
-            menuInput.close(); 
-        } 
+       //{ 
+            //menuInput.close(); 
+        //} 
+
+}//close while loop
+
     } 
 } 
