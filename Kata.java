@@ -48,8 +48,7 @@ public class Kata{
 	}
 
 	public static boolean isSquare(int number){
-	int check1 = (int) Math.sqrt(number);
-	return check1 * check1 == number;
+	return Math.sqrt(number) % 1 == 0;
 	}
 
 	public static boolean isPalindrome(int numbers){
