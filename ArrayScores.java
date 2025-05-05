@@ -16,8 +16,11 @@ int index4 = scores[4];
 
 System.out.print(index0 + " " + index1 + " " + index2 + " " + index3 + " " + index4);
 
-System.out.println("\n" + index0 + " \n" + index1 + " \n" + index2 + " \n" + index3 + " \n" + index4);
+System.out.println("\t \n" + index0 + " \n" + index1 + " \n" + index2 + " \n" + index3 + " \n" + index4);
 
+for(int count = 0; count <= scores.length-1; count++){
+System.out.print(scores[count] + " ");
+}
 
 }
 
