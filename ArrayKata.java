@@ -32,7 +32,16 @@ public static int sumOfEvenNumberIn(int[] arrayOfIntegers){
 int sum = 0;
 for(int count = 0; count < arrayOfIntegers.length; count++){
 if(arrayOfIntegers[count] % 2 == 0)
-sum = sum + arrayOfIntegers[count];
+sum++;
+}
+return sum;
+} 
+
+public static int sumOfOddNumberIn(int[] arrayOfIntegers){
+int sum = 0;
+for(int count = 0; count < arrayOfIntegers.length; count++){
+if(arrayOfIntegers[count] % 2 != 0)
+sum++;
 }
 return sum;
 } 
