@@ -78,33 +78,31 @@ sum++;
 return sum;
 } 
 
-public static int evenNumberIn(int[] arrayOfIntegers){
-int[] sum = new int[];
+public static int[] evenNumberIn(int[] arrayOfIntegers){
+int[] sum = new int[5];
 for(int count = 0; count < arrayOfIntegers.length; count++){
 if(arrayOfIntegers[count] % 2 == 0)
-sum = arrayOfIntegers[count];
+sum[count] = arrayOfIntegers[count];
 }
 return sum;
 } 
 
-public static int oddNumberIn(int[] arrayOfIntegers){
-int[] sum = new int[];
+public static int[] oddNumberIn(int[] arrayOfIntegers){
+int[] sum = new int[5];
 for(int count = 0; count < arrayOfIntegers.length; count++){
 if(arrayOfIntegers[count] % 2 != 0)
-sum = arrayOfIntegers[count];
+sum[count] = arrayOfIntegers[count];
 }
 return sum;
 } 
 
-
-
-
-
-
-
-
-
-
+public static int[] sqNumberIn(int[] arrayOfIntegers){
+int[] sum = new int[2];
+for(int count = 0; count < arrayOfIntegers.length; count++){
+sum[count] = arrayOfIntegers[count] * arrayOfIntegers[count];
+}
+return sum;
+} 
 
 
 
