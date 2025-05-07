@@ -32,7 +32,7 @@ public static int sumOfEvenNumberIn(int[] arrayOfIntegers){
 int sum = 0;
 for(int count = 0; count < arrayOfIntegers.length; count++){
 if(arrayOfIntegers[count] % 2 == 0)
-sum++;
+sum += arrayOfIntegers[count];
 }
 return sum;
 } 
@@ -41,10 +41,68 @@ public static int sumOfOddNumberIn(int[] arrayOfIntegers){
 int sum = 0;
 for(int count = 0; count < arrayOfIntegers.length; count++){
 if(arrayOfIntegers[count] % 2 != 0)
+sum += arrayOfIntegers[count];
+}
+return sum;
+} 
+
+public static int maximumAndMinimumOf(int[] arrayOfIntegers){
+int min = arrayOfIntegers[0];
+int max = arrayOfIntegers[0];
+for(int count = 0; count < arrayOfIntegers.length; count++){
+if(arrayOfIntegers[count] < min){
+min = arrayOfIntegers[count];
+}
+if(arrayOfIntegers[count] > max){
+max = arrayOfIntegers[count];
+}
+}
+return max;
+} 
+
+public static int noOfOddNumberIn(int[] arrayOfIntegers){
+int sum = 0;
+for(int count = 0; count < arrayOfIntegers.length; count++){
+if(arrayOfIntegers[count] % 2 != 0)
 sum++;
 }
 return sum;
 } 
+
+public static int noOfEvenNumberIn(int[] arrayOfIntegers){
+int sum = 0;
+for(int count = 0; count < arrayOfIntegers.length; count++){
+if(arrayOfIntegers[count] % 2 == 0)
+sum++;
+}
+return sum;
+} 
+
+public static int evenNumberIn(int[] arrayOfIntegers){
+int[] sum = new int[];
+for(int count = 0; count < arrayOfIntegers.length; count++){
+if(arrayOfIntegers[count] % 2 == 0)
+sum = arrayOfIntegers[count];
+}
+return sum;
+} 
+
+public static int oddNumberIn(int[] arrayOfIntegers){
+int[] sum = new int[];
+for(int count = 0; count < arrayOfIntegers.length; count++){
+if(arrayOfIntegers[count] % 2 != 0)
+sum = arrayOfIntegers[count];
+}
+return sum;
+} 
+
+
+
+
+
+
+
+
 
 
 
