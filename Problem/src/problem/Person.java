@@ -1,9 +1,7 @@
 package Problem;
-
+import problem.Problem;
 public class Person {
 
-    public
-    Problem = list<Problem>
 
     public void addProblem(Problem problem){
 
