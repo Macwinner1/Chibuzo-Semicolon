@@ -1,51 +1,75 @@
 import Account.Account;
+import Account.BankApp;
+import Exceptions.InCorrectPinException;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TestAccount {
 
     @Test
-    public void testAccountBalance() {
-        Account okaforAccount = new Account("correctPin");
+    public void testAccountOpenWithZeroBalance() {
+        BankApp okaforAccount = new Account("okafor", "ifechukwu", "08068853611", "Savings");
         assertEquals(0, okaforAccount.getBalance());
     }
-
     @Test
-    public void testDeposit() {
-        Account okaforAccount = new Account("correctPin");
-        assertEquals(2000, okaforAccount.deposit(2000));
-    }
-
-    @Test
-    public void testDeposit_2k_twice() {
-        Account okaforAccount = new Account("correctPin");
-        okaforAccount.deposit(2000);
-        okaforAccount.deposit(2000);
-        assertEquals(4000, okaforAccount.getBalance());
-    }
-
-    @Test
-    public void testDeposit_dont_take_negative_number() {
-        Account okaforAccount = new Account("correctPin");
-        okaforAccount.deposit(-6000);
+    public void test2AccountOpenWithZeroBalance() {
+        BankApp okaforAccount = new Account("okafor", "ifechukwu", "08068853611", "Savings");
+        BankApp johnAccount = new Account("john", "chinedu", "08065583611", "Savings");
         assertEquals(0, okaforAccount.getBalance());
+        assertEquals(0, johnAccount.getBalance());
     }
-
     @Test
-    public void testWithdraw() {
-        Account okaforAccount = new Account("correctPin");
-        okaforAccount.deposit(6000);
-        okaforAccount.withdraw(2000);
-        assertEquals(4000, okaforAccount.getBalance());
+    public void testDepositOn2Account() {
+        BankApp okaforAccount = new Account("okafor", "ifechukwu", "08068853611", "Savings");
+        BankApp johnAccount = new Account("john", "chinedu", "08065583611", "Savings");
+        okaforAccount.deposit(5500);
+        johnAccount.deposit(5000);
+        assertEquals(5500, okaforAccount.getBalance());
+        assertEquals(5000, johnAccount.getBalance());
     }
-
     @Test
-    public void testWithdraw_cant_take_negative_number() {
-        Account okaforAccount = new Account("correctPin");
-        okaforAccount.deposit(6000);
-        okaforAccount.withdraw(-2000);
-        assertEquals(6000, okaforAccount.getBalance());
+    public void testNegativeDepositOn2Account() {
+        BankApp okaforAccount = new Account("okafor", "ifechukwu", "08068853611", "Savings");
+        BankApp johnAccount = new Account("john", "chinedu", "08065583611", "Savings");
+        okaforAccount.deposit(-5500);
+        johnAccount.deposit(-5000);
+        assertEquals(0, okaforAccount.getBalance());
+        assertEquals(0, johnAccount.getBalance());
     }
-
+    @Test
+    public void testNegativeWithdrawOn2AccountWithZeroBalance() {
+        BankApp okaforAccount = new Account("okafor", "ifechukwu", "08068853611", "Savings");
+        BankApp johnAccount = new Account("john", "chinedu", "08065583611", "Savings");
+        okaforAccount.setPin("okaforPin");
+        johnAccount.setPin("johnPin");
+        okaforAccount.withdraw(-5500, "okaforPin");
+        johnAccount.withdraw(-5000, "johnPin");
+        assertEquals(0, okaforAccount.getBalance());
+        assertEquals(0, johnAccount.getBalance());
+    }
+    @Test
+    public void testWithdrawOn2Account() {
+        BankApp okaforAccount = new Account("okafor", "ifechukwu", "08068853611", "Savings");
+        BankApp johnAccount = new Account("john", "chinedu", "08065583611", "Savings");
+        okaforAccount.deposit(5500);
+        johnAccount.deposit(5000);
+        okaforAccount.setPin("okaforPin");
+        johnAccount.setPin("johnPin");
+        okaforAccount.withdraw(2500, "okaforPin");
+        johnAccount.withdraw(1500, "johnPin");
+        assertEquals(3000, okaforAccount.getBalance());
+        assertEquals(3500, johnAccount.getBalance());
+    }
+    @Test
+    public void testWithdrawOn2AccountWithInvalidPin() {
+        BankApp okaforAccount = new Account("okafor", "ifechukwu", "08068853611", "Savings");
+        BankApp johnAccount = new Account("john", "chinedu", "08065583611", "Savings");
+        okaforAccount.deposit(5500);
+        johnAccount.deposit(5000);
+        okaforAccount.setPin("okaforPin");
+        johnAccount.setPin("johnPin");
+        assertThrows(InCorrectPinException.class, () -> okaforAccount.withdraw(2500, "okPin"));
+        assertThrows(InCorrectPinException.class, () -> johnAccount.withdraw(1500, "jonPin"));
+    }
 }
