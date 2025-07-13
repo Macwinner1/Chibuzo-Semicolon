@@ -2,6 +2,8 @@ package Account;
 
 import Exceptions.InCorrectPinException;
 
+import java.util.ArrayList;
+
 public class Account implements BankApp {
     private String FirstName;
     private String LastName;
@@ -9,6 +11,8 @@ public class Account implements BankApp {
     private String AccountType;
     private String pin;
     private int balance;
+    private final ArrayList<BankApp> accountsList;
+
 
     public Account(String FirstName, String LastName, String PhoneNumber, String AccountType) {
         this.FirstName = FirstName;
@@ -16,8 +20,8 @@ public class Account implements BankApp {
         this.PhoneNumber = PhoneNumber;
         this.AccountType = AccountType;
         this.pin = pin;
+        accountsList = new ArrayList<>();
     }
-
     @Override
     public int getBalance() {
         return balance ;
@@ -31,9 +35,20 @@ public class Account implements BankApp {
     public void setPin(String pin) {
         this.pin = pin;
     }
-    public String getPin() {
-        return pin;
+
+    @Override
+    public void createAccount(String FirstName, String LastName, String PhoneNumber, String AccountType){
+        Account account = new Account(FirstName, LastName, PhoneNumber, AccountType);
+        accountsList.add(account);
     }
+    public String getAccounts(String PhoneNumber){
+        for (BankApp account : accountsList) {
+            if(PhoneNumber.equals(account)){
+
+            }
+        }
+    }
+
     public void validatePin(String pin) {
         if (this.pin.equals(pin)){
             this.pin = pin;
