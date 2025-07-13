@@ -42,14 +42,10 @@ public class Account implements BankApp {
         accountsList.add(account);
     }
     public String getAccounts(String PhoneNumber){
-        for (BankApp account : accountsList) {
-            if(PhoneNumber.equals(account)){
-
-            }
-        }
+        for()
     }
 
-    public void validatePin(String pin) {
+    private void validatePin(String pin) {
         if (this.pin.equals(pin)){
             this.pin = pin;
         }

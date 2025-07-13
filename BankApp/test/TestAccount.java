@@ -50,8 +50,8 @@ public class TestAccount {
     }
     @Test
     public void testWithdrawOn2Account() {
-        BankApp.createAccount ("okafor", "ifechukwu", "08068853611", "Savings");
-        BankApp.createAccount("john", "chinedu", "08065583611", "Savings");
+        BankApp okaforAccount = new Account("okafor", "ifechukwu", "08068853611", "Savings");
+        BankApp johnAccount = new Account("john", "chinedu", "08065583611", "Savings");
         okaforAccount.deposit(5500);
         johnAccount.deposit(5000);
         okaforAccount.setPin("okaforPin");

@@ -9,5 +9,5 @@ public interface BankApp {
 
     void setPin(String password);
 
-    static void createAccount(String FirstName, String LastName, String PhoneNumber, String AccountType);
+    void createAccount(String FirstName, String LastName, String PhoneNumber, String AccountType);
 }
