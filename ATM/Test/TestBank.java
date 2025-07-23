@@ -46,6 +46,6 @@ public class TestBank {
         bankAccount.withdraw(4500, "CorrectPin");
         assertEquals(500, bankAccount.getBalance());
     }
-    
+
 
 }
