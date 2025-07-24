@@ -1,7 +1,4 @@
-import PhoneBook.Contact;
-import PhoneBook.Name;
-import PhoneBook.InvalidEmailException;
-import PhoneBook.InvalidPhoneNumberException;
+import PhoneBook.*;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -31,6 +28,18 @@ public class PhoneBookTest {
     @Test
     public void testThatEmailIsValid(){
         assertThrows(InvalidEmailException.class, () -> new Contact("08068853611", new Name("ifechukwu"),"okafor@gmail.com"));
+    }
+    @Test
+    public void testThatContactListIsEmpty(){
+        PhoneBook phoneBook = new PhoneBook();
+        phoneBook.addContact(new Contact(""));
+        assertEquals(contact.getPhone(), "08068853611");
+
+    }
+    @Test
+    public void testThatContactWasAdded(){
+        Contact contact = new Contact("08068853611");
+
     }
 
 

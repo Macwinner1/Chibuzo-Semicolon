@@ -72,4 +72,8 @@ public class Contact {
     public void setAddress(String address) {
         this.address = address;
     }
+
+    public void add(String phone, Name name, String email, String address){
+
+    }
 }
