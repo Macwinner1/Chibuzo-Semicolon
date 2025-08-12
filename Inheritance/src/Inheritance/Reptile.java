@@ -1,4 +1,5 @@
 package Inheritance;
 
-public class Reptile {
+public class Reptile extends Vertebrate{
+
 }

@@ -1,4 +1,5 @@
 package Inheritance;
 
-public class Mammal {
+public class Mammal extends Vertebrate{
+
 }

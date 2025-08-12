@@ -42,7 +42,11 @@ public class Account implements BankApp {
         accountsList.add(account);
     }
     public String getAccounts(String PhoneNumber){
-        for()
+        for(int count = 0; count < accountsList.size(); count++){
+            if(PhoneNumber == accountsList[count]){
+
+            }
+        }
     }
 
     private void validatePin(String pin) {

@@ -1,4 +1,4 @@
 package Inheritance;
 
-public class LivingThing {
+public class LivingThing extends Thing {
 }
