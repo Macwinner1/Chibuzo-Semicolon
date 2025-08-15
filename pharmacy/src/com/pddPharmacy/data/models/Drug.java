@@ -1,4 +1,4 @@
-package data.models;
+package com.pddPharmacy.data.models;
 
 import java.time.LocalDateTime;
 
